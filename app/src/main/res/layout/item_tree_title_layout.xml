@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRlTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:background="#ffffff">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#DADADA" />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px_30">
+
+
+        <TextView
+            android:id="@+id/mTvFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_60"
+            android:text="性别"
+            android:textColor="#333333"
+            android:textSize="@dimen/px_43" />
+
+        <CheckBox
+            android:id="@+id/mCbDesc"
+            android:layout_width="@dimen/px_36"
+            android:layout_height="@dimen/px_24"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="79px"
+            android:background="@drawable/select_filter"
+            android:button="@null"
+            android:enabled="false"
+            android:clickable="false" />
+
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/rll_input_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_86"
+        android:layout_below="@id/rl_top"
+        android:layout_marginBottom="@dimen/px_30"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/et_low"
+            android:layout_width="@dimen/px_270"
+            android:layout_height="@dimen/px_86"
+            android:layout_marginBottom="@dimen/px_30"
+            android:background="@drawable/select_filter_item"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:hint="最低价"
+            android:inputType="numberDecimal"
+            android:paddingLeft="17px"
+            android:paddingRight="17px"
+            android:singleLine="true"
+            android:textColor="@drawable/select_filter_item_text_color"
+            android:textSize="@dimen/px_37" />
+
+        <View
+            android:layout_width="115px"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/px_40"
+            android:layout_marginRight="@dimen/px_40"
+            android:background="#818181" />
+
+        <EditText
+            android:id="@+id/et_height"
+            android:layout_width="@dimen/px_270"
+            android:layout_height="@dimen/px_86"
+            android:layout_marginBottom="@dimen/px_30"
+            android:background="@drawable/select_filter_item"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:hint="最高价"
+            android:inputType="numberDecimal"
+            android:paddingLeft="17px"
+            android:paddingRight="17px"
+            android:singleLine="true"
+            android:textColor="@drawable/select_filter_item_text_color"
+            android:textSize="@dimen/px_37" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_160">
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_40"
+            android:text="重置"
+            android:textColor="#818181"
+            android:textSize="@dimen/px_52" />
+
+        <RelativeLayout
+            android:id="@+id/iv_back_drawer"
+            android:layout_width="@dimen/px_200"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/px_40">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/search"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="筛选"
+            android:textColor="#000000"
+            android:textSize="@dimen/px_52" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/rl_title"
+        android:background="#DADADA" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/all_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="189px"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#DADADA" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="925px"
+            android:layout_height="130px"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/px_32"
+            android:background="#000"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px_52" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/all_bottom"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="3px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>
